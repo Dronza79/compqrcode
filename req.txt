@@ -1,0 +1,10 @@
+qrcode==7.4.2
+typing_extensions==4.7.0
+pypng==0.20220715.0
+colorama==0.4.6
+pyinstaller==6.2.0
+pyinstaller-hooks-contrib==2023.10
+pywin32-ctypes==0.2.2
+packaging==23.2
+altgraph==0.17.4
+pefile==2023.2.7
