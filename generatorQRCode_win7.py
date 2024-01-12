@@ -15,6 +15,8 @@ def check_in_data(file):
         with open(file, 'r', newline='') as f:
             csv_reader = csv.reader(f, delimiter=';', quotechar='|')
             for row in csv_reader:
+                if not all(row):
+                    continue
                 data_list.append(row)
     except FileNotFoundError:
         new_f = open(file, 'w')
@@ -51,8 +53,6 @@ while True:
         os.mkdir(SUBSTATION)
         data = check_in_data(filename)
         for folder in data:
-            if not folder[0] or not folder[1]:
-                continue
             os.mkdir(f'{SUBSTATION}/{folder[1]}-{folder[0]}')
         print('\nВыполнено...\n')
     elif choice == '2':
